@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Divadlo U Hasičů – návrh modernizace</title>
+  <meta name="description" content="Neoficiální návrh modernizace webu Divadla U Hasičů.">
+  <meta name="theme-color" content="#4b170e">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip-link" href="#main">Přeskočit na obsah</a>
+
+<header class="site-header">
+  <div class="utility-bar">
+    <div class="container-xxl utility-inner">
+      <span>Římská 45, Praha 2</span>
+      <div>
+        <a href="tel:+420222518716">Pokladna 222 518 716</a>
+        <a href="mailto:info@divadlouhasicu.net">info@divadlouhasicu.net</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-header">
+    <div class="container-xxl nav-row">
+      <a class="brand" href="#" aria-label="Divadlo U Hasičů">
+        <img src="assets/logo.png" alt="Divadlo U Hasičů">
+      </a>
+
+      <nav class="main-nav d-none d-lg-flex" aria-label="Hlavní navigace">
+        <a class="active" href="#program">Program</a>
+        <a href="#repertoar">Repertoár</a>
+        <a href="#deti">Dětská představení</a>
+        <a href="#vstupenky">Vstupenky</a>
+        <a href="#pronajem">Pronájem</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-toggle" type="button" aria-label="Hledat"><i class="bi bi-search"></i></button>
+        <a class="header-repertoire d-none d-xl-flex" href="#repertoar">Repertoár</a>
+        <a class="header-ticket" href="https://goout.net/cs/divadlo-u-hasicu/vzlkb/">Koupit vstupenky</a>
+        <button class="menu-toggle d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-label="Menu"><i class="bi bi-list"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="search-panel" hidden>
+    <div class="container-xxl">
+      <form class="site-search">
+        <input id="siteSearch" type="search" placeholder="Hledat představení nebo informace">
+        <button type="submit">Hledat</button>
+      </form>
+    </div>
+  </div>
+</header>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header">
+    <strong>Divadlo U Hasičů</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Zavřít"></button>
+  </div>
+  <div class="offcanvas-body mobile-nav">
+    <a href="#program">Program</a>
+    <a href="#repertoar">Repertoár</a>
+    <a href="#deti">Dětská představení</a>
+    <a href="#vstupenky">Vstupenky</a>
+    <a href="#pronajem">Pronájem</a>
+    <a href="#kontakt">Kontakt</a>
+  </div>
+</div>
+
+<main id="main">
+  <section class="hero-section">
+    <div class="container-xxl">
+      <div class="hero-layout">
+        <article class="hero-media">
+          <img src="assets/hero.jpg" alt="Představení v Divadle U Hasičů">
+          <div class="hero-caption">
+            <div>
+              <h1>Detektor lži</h1>
+              <p>Divadlo U Hasičů</p>
+            </div>
+            <a href="#program">Program</a>
+          </div>
+        </article>
+
+        <aside class="nearest" aria-label="Nejbližší představení">
+          <div class="nearest-head">
+            <h2>Nejbližší představení</h2>
+            <span>Září 2026</span>
+          </div>
+
+          <a class="nearest-row" href="#program">
+            <time><strong>16</strong><span>září</span></time>
+            <span class="nearest-title"><strong>Na ostro</strong><small>19:00</small></span>
+            <span>Vstupenky</span>
+          </a>
+          <a class="nearest-row" href="#program">
+            <time><strong>17</strong><span>září</span></time>
+            <span class="nearest-title"><strong>Silné řeči – Jakub Gulík speciál</strong><small>19:00</small></span>
+            <span>Vstupenky</span>
+          </a>
+          <a class="nearest-row" href="#program">
+            <time><strong>20</strong><span>září</span></time>
+            <span class="nearest-title"><strong>Sex v šestém patře</strong><small>19:00</small></span>
+            <span>Vstupenky</span>
+          </a>
+          <a class="nearest-row" href="#program">
+            <time><strong>21</strong><span>září</span></time>
+            <span class="nearest-title"><strong>Ari Eldjárn</strong><small>20:00</small></span>
+            <span>Vstupenky</span>
+          </a>
+
+          <a class="nearest-all" href="#program">Celý program <i class="bi bi-arrow-right"></i></a>
+        </aside>
+      </div>
+
+      <form class="event-search">
+        <div class="event-search-main">
+          <i class="bi bi-search"></i>
+          <input type="search" placeholder="Co chcete vidět?">
+        </div>
+        <select aria-label="Datum">
+          <option>Datum</option>
+          <option>Dnes</option>
+          <option>Zítra</option>
+          <option>Tento týden</option>
+        </select>
+        <button type="submit">Najít představení</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="info-strip">
+    <div class="container-xxl info-strip-inner">
+      <div><strong>Pokladna</strong><span>222 518 716</span></div>
+      <div><strong>Pokladní doba</strong><span>Po–Pá 12:00–19:00</span></div>
+      <div><strong>Vstupenky online</strong><span>24 hodin denně</span></div>
+      <a href="#vstupenky">Informace ke vstupenkám <i class="bi bi-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <section class="program-section" id="program">
+    <div class="container-xxl">
+      <div class="section-head">
+        <div>
+          <h2>Program</h2>
+          <p>Nejbližší představení v Divadle U Hasičů.</p>
+        </div>
+        <a href="https://divadlouhasicu.net/program/">Celý program na webu divadla</a>
+      </div>
+
+      <div class="program-list">
+        <article class="program-row">
+          <time><strong>16</strong><span>středa<br>září</span></time>
+          <div class="program-time">19:00</div>
+          <div class="program-title"><h3>Na ostro</h3><span>Divadlo U Hasičů</span></div>
+          <a href="https://goout.net/cs/divadlo-u-hasicu/vzlkb/">Vstupenky</a>
+        </article>
+        <article class="program-row">
+          <time><strong>17</strong><span>čtvrtek<br>září</span></time>
+          <div class="program-time">19:00</div>
+          <div class="program-title"><h3>Silné řeči – Jakub Gulík speciál</h3><span>Stand-up comedy</span></div>
+          <a href="https://goout.net/cs/divadlo-u-hasicu/vzlkb/">Vstupenky</a>
+        </article>
+        <article class="program-row">
+          <time><strong>20</strong><span>neděle<br>září</span></time>
+          <div class="program-time">19:00</div>
+          <div class="program-title"><h3>Sex v šestém patře</h3><span>Divadlo U Hasičů</span></div>
+          <a href="https://goout.net/cs/divadlo-u-hasicu/vzlkb/">Vstupenky</a>
+        </article>
+        <article class="program-row">
+          <time><strong>21</strong><span>pondělí<br>září</span></time>
+          <div class="program-time">20:00</div>
+          <div class="program-title"><h3>Ari Eldjárn</h3><span>Stand-up comedy</span></div>
+          <a href="https://goout.net/cs/divadlo-u-hasicu/vzlkb/">Vstupenky</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="repertoire-section" id="repertoar">
+    <div class="container-xxl">
+      <div class="section-head repertoire-head">
+        <div>
+          <h2>Repertoár</h2>
+          <p>Komedie, hostující soubory, stand-up i dětské pořady.</p>
+        </div>
+        <a href="https://divadlouhasicu.net/repertoar/">Celý repertoár</a>
+      </div>
+
+      <div class="repertoire-list">
+        <a href="https://divadlouhasicu.net/repertoar/">
+          <span>Komedie</span><strong>Královny</strong><small>Věra Cibulková, Jana Boušková a další</small><i class="bi bi-arrow-right"></i>
+        </a>
+        <a href="https://divadlouhasicu.net/repertoar/">
+          <span>Komedie</span><strong>Žena, která uvařila svého manžela</strong><small>Divadelní komedie</small><i class="bi bi-arrow-right"></i>
+        </a>
+        <a href="https://divadlouhasicu.net/repertoar/">
+          <span>Stand-up</span><strong>Silné řeči</strong><small>Stand-up comedy show</small><i class="bi bi-arrow-right"></i>
+        </a>
+        <a href="https://divadlouhasicu.net/repertoar/">
+          <span>Činohra</span><strong>Vrátila se jednou v noci</strong><small>Režie R. Lipus</small><i class="bi bi-arrow-right"></i>
+        </a>
+        <a href="https://divadlouhasicu.net/repertoar/">
+          <span>Komedie</span><strong>Caveman</strong><small>Režie P. Hartl</small><i class="bi bi-arrow-right"></i>
+        </a>
+        <a href="https://divadlouhasicu.net/repertoar/">
+          <span>Činohra</span><strong>Víš přece, že neslyším, když teče voda</strong><small>Režie P. Háša</small><i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="children-section" id="deti">
+    <div class="container-xxl children-grid">
+      <img src="assets/children.jpg" alt="Dětská představení">
+      <div>
+        <h2>Dětská představení</h2>
+        <p>V repertoáru Divadla U Hasičů jsou také pohádky a rodinná představení. Na webu divadla najdete například tituly Čert a Káča, Ferda Mravenec, Kocour Modroočko, Princezna na hrášku nebo Příhody včelích medvídků.</p>
+        <a href="https://divadlouhasicu.net/detska-predstaveni/">Program pro děti</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="ticket-section" id="vstupenky">
+    <div class="container-xxl">
+      <div class="ticket-head">
+        <h2>Vstupenky a pokladna</h2>
+        <p>Rezervace a nákup vstupenek online i přímo v divadle.</p>
+      </div>
+
+      <div class="ticket-columns">
+        <div>
+          <h3>Vstupenky online</h3>
+          <p>Vstupenky můžete rezervovat i zakoupit online. Systém umožňuje výběr místa v hledišti a online platbu kartou nebo převodem.</p>
+          <a href="https://goout.net/cs/divadlo-u-hasicu/vzlkb/">Koupit online</a>
+        </div>
+        <div>
+          <h3>Pokladna divadla</h3>
+          <p>Pokladna je otevřena v pracovní dny od 12:00 do 19:00. Mimo pokladní hodiny je možné koupit vstupenky jednu hodinu před představením.</p>
+          <strong>222 518 716</strong>
+        </div>
+        <div>
+          <h3>Hromadné objednávky</h3>
+          <p>Hromadnou objednávku minimálně 10 vstupenek lze vyřídit e-mailem. Vstupenky mohou být připravené na pokladně.</p>
+          <a href="mailto:info@divadlouhasicu.net">info@divadlouhasicu.net</a>
+        </div>
+        <div>
+          <h3>Hlediště</h3>
+          <p>Divadlo nabízí 342 míst ve 14 řadách a má bezbariérový přístup.</p>
+          <a href="https://divadlouhasicu.net/vstupenky/">Více informací</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rental-section" id="pronajem">
+    <div class="container-xxl rental-grid">
+      <div>
+        <h2>Pronájem divadla</h2>
+        <p>Divadlo lze pronajmout včetně služeb a techniky pro divadelní soubory, firemní večery, představení, rauty a další společenské akce.</p>
+        <p class="rental-contacts"><a href="tel:+420222516910">222 516 910</a><a href="tel:+420602249057">602 249 057</a></p>
+      </div>
+      <img src="assets/rental.jpg" alt="Pronájem Divadla U Hasičů">
+    </div>
+  </section>
+
+  <section class="contact-section" id="kontakt">
+    <div class="container-xxl contact-grid">
+      <div>
+        <h2>Divadlo U Hasičů</h2>
+        <p>Římská 45<br>120 00 Praha 2</p>
+        <p><a href="tel:+420222516910">222 516 910</a><br><a href="mailto:info@divadlouhasicu.net">info@divadlouhasicu.net</a></p>
+        <a class="contact-link" href="https://divadlouhasicu.net/kontakt/">Jak se k nám dostat <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="transport-list">
+        <h3>Doprava</h3>
+        <div><strong>Metro A</strong><span>Náměstí Míru</span></div>
+        <div><strong>Tram 4, 10, 16, 22</strong><span>Náměstí Míru</span></div>
+        <div><strong>Tram 11</strong><span>Italská</span></div>
+        <div><strong>Bus 135</strong><span>Náměstí Míru</span></div>
+      </div>
+      <div class="visitor-note">
+        <h3>Pro návštěvníky</h3>
+        <p>Divadelní kavárna je otevřena 1,5 hodiny před začátkem představení.</p>
+        <p>Sál je klimatizovaný a má bezbariérový přístup.</p>
+        <a href="https://www.facebook.com/divadlouhasicu/">Facebook</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container-xxl footer-main">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="Divadlo U Hasičů">
+      <div><strong>Divadlo U Hasičů</strong><span>Římská 45, Praha 2</span></div>
+    </div>
+    <nav aria-label="Patička">
+      <a href="#program">Program</a>
+      <a href="#repertoar">Repertoár</a>
+      <a href="#deti">Dětská představení</a>
+      <a href="#vstupenky">Vstupenky</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+  <div class="container-xxl footer-bottom">
+    <span>© Divadlo U Hasičů</span>
+    <span>Neoficiální návrh modernizace homepage</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
